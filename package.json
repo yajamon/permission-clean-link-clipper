@@ -1,0 +1,23 @@
+{
+  "name": "permission-clean-link-clipper",
+  "version": "1.0.0",
+  "description": "Permission Clean Link Clipper.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://yajamon@github.com/yajamon/permission-clean-link-clipper.git"
+  },
+  "keywords": [
+    "link-clipper"
+  ],
+  "author": "yajamon <yajamon.tatsuki@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yajamon/permission-clean-link-clipper/issues"
+  },
+  "homepage": "https://github.com/yajamon/permission-clean-link-clipper#readme",
+  "private": true
+}
