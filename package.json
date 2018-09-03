@@ -20,5 +20,8 @@
     "url": "https://github.com/yajamon/permission-clean-link-clipper/issues"
   },
   "homepage": "https://github.com/yajamon/permission-clean-link-clipper#readme",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  }
 }
