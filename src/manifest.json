@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "Permission Clean Link Clipper.",
     "manifest_version": 2,
+    "permissions": [
+        "activeTab"
+    ],
     "browser_action": {
         "default_popup": "popup.html"
     }
