@@ -2,5 +2,8 @@
     "name": "Permission Clean Link Clipper",
     "version": "1.0.0",
     "description": "Permission Clean Link Clipper.",
-    "manifest_version": 2
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
 }
