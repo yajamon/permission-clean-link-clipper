@@ -10,6 +10,7 @@ rm -rfv dist/*
 
 # copy resource
 echo "## copy resource" >&2
-cp -rfv src/* dist/
+cp -rfv src/*.{html,json} dist/
 
 # compile
+npx tsc
