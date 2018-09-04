@@ -1,6 +1,8 @@
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    captureTitleAndUrlAsync();
+    captureTitleAndUrlAsync().then(()=>{
+        copyToClipboard();
+    });
 });
 
 function captureTitleAndUrlAsync() {
@@ -18,4 +20,10 @@ function captureTitleAndUrlAsync() {
         return true;
     });
 
+}
+
+function copyToClipboard() {
+    let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
+    clipbase.select();
+    document.execCommand("copy");
 }
