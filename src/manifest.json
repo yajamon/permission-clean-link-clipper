@@ -7,9 +7,6 @@
         "activeTab"
     ],
     "browser_action": {
-    },
-    "background": {
-        "scripts": ["js/background.js"],
-        "persistant": false
+        "default_popup": "popup.html"
     }
 }
