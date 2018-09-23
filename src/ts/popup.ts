@@ -1,8 +1,8 @@
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    captureTitleAndUrlAsync().then(() => {
-        copyToClipboard();
-    });
+    captureTitleAndUrlAsync()
+        .then(generateDefaultFormat)
+        .then(copyToClipboard);
 });
 
 function captureTitleAndUrlAsync() {
@@ -18,12 +18,13 @@ function captureTitleAndUrlAsync() {
             }
             resolve(tab);
         });
-    }).then((tab) => {
-        let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
-        clipbase.innerText = tab.title + "\n" + tab.url;
-        return true;
     });
 
+}
+
+function generateDefaultFormat(tab: chrome.tabs.Tab) {
+    let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
+    clipbase.innerText = tab.title + "\n" + tab.url;
 }
 
 function copyToClipboard() {
