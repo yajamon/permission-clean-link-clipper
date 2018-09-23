@@ -1,0 +1,13 @@
+body {
+    box-sizing: border-box;
+}
+
+label {
+    display: inline-block;
+    width: 6ex;
+}
+
+input {
+    display: inline-block;
+    width: 60ex;
+}
