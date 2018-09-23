@@ -1,26 +1,30 @@
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    captureTitleAndUrlAsync().then(() => {
-        copyToClipboard();
-    });
+    captureTitleAndUrlAsync()
+        .then(generateDefaultFormat)
+        .then(copyToClipboard);
 });
 
 function captureTitleAndUrlAsync() {
-    return new Promise((resolve) => {
+    return new Promise((resolve: (tab: chrome.tabs.Tab) => void, reject) => {
         chrome.tabs.query({
             active: true,
             currentWindow: true,
         }, (tabs) => {
-            resolve(tabs.shift());
+            let tab = tabs.shift()
+            if (!tab) {
+                reject("tab not found!");
+                return;
+            }
+            resolve(tab);
         });
-    }).then((tab) => {
-        let title = (tab as chrome.tabs.Tab).title;
-        let url = (tab as chrome.tabs.Tab).url;
-        let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
-        clipbase.innerText = title + "\n" + url;
-        return true;
     });
 
+}
+
+function generateDefaultFormat(tab: chrome.tabs.Tab) {
+    let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
+    clipbase.innerText = tab.title + "\n" + tab.url;
 }
 
 function copyToClipboard() {
