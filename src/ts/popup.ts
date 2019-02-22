@@ -33,11 +33,11 @@ function captureTitleAndUrlAsync() {
 
 function generateDefaultFormat(tab: chrome.tabs.Tab) {
   let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
-  clipbase.innerText = tab.title + "\n" + tab.url;
+  clipbase.value = tab.title + "\n" + tab.url;
 }
 function generateMarkdownFormat(tab: chrome.tabs.Tab) {
   let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
-  clipbase.innerText = `[${tab.title}](${tab.url})`;
+  clipbase.value = `[${tab.title}](${tab.url})`;
 }
 
 function copyToClipboard() {
