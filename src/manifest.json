@@ -6,7 +6,7 @@
   "permissions": [
     "activeTab"
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "24": "images/file_copy_black_24dp.png"
