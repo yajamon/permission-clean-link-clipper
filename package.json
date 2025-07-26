@@ -24,7 +24,7 @@
   "homepage": "https://github.com/yajamon/permission-clean-link-clipper#readme",
   "private": true,
   "devDependencies": {
-    "@types/chrome": "0.0.72",
-    "typescript": "^3.0.3"
+    "@types/chrome": "^0.1.1",
+    "typescript": "^5.8.3"
   }
 }
