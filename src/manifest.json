@@ -2,9 +2,11 @@
   "name": "Permission Clean Link Clipper",
   "version": "1.1.1",
   "description": "Permission Clean Link Clipper.",
-  "manifest_version": 2,
-  "permissions": ["activeTab"],
-  "browser_action": {
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "24": "images/file_copy_black_24dp.png"
