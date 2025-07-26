@@ -43,5 +43,11 @@ function generateMarkdownFormat(tab: chrome.tabs.Tab) {
 function copyToClipboard() {
   let clipbase = document.getElementById("clipbase") as HTMLTextAreaElement;
   clipbase.select();
-  document.execCommand("copy");
+  
+  // Use modern Clipboard API if available, fallback to execCommand
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(clipbase.value);
+  } else {
+    document.execCommand("copy");
+  }
 }
